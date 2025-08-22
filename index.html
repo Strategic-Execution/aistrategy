@@ -14,24 +14,27 @@
         }
 
         :root {
-            /* Premium AI Color Palette */
-            --ai-primary: #0A0E27;
-            --ai-secondary: #1A1F3A;
-            --ai-accent: #00D9FF;
-            --ai-accent-alt: #7C3AED;
-            --ai-highlight: #10B981;
-            --ai-warning: #F59E0B;
-            --ai-danger: #EF4444;
-            --ai-neural: #818CF8;
+            /* DIA Strategic Enablement Color Palette */
+            --ai-primary: #1B2951;          /* Navy blue from header */
+            --ai-secondary: #FFFFFF;        /* White */
+            --ai-accent: #4472C4;           /* Medium blue */
+            --ai-accent-alt: #5B9BD5;       /* Light blue */
+            --ai-highlight: #70AD47;        /* Green */
+            --ai-warning: #FFC000;          /* Yellow/Gold */
+            --ai-danger: #ED7D31;           /* Orange */
+            --ai-purple: #A5A5A5;           /* Grey */
+            --ai-salmon: #F4B183;           /* Light salmon/peach */
+            --ai-teal: #92D050;             /* Light green */
+            --ai-mint: #A9D18E;             /* Mint green */
             
             /* Gradients */
-            --gradient-main: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-dark: linear-gradient(135deg, #0A0E27 0%, #1A1F3A 100%);
-            --gradient-accent: linear-gradient(135deg, #00D9FF 0%, #7C3AED 100%);
-            --gradient-mesh: radial-gradient(at 40% 20%, hsla(280,100%,74%,0.2) 0px, transparent 50%),
-                            radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%),
-                            radial-gradient(at 0% 50%, hsla(355,100%,93%,0.1) 0px, transparent 50%),
-                            radial-gradient(at 80% 100%, hsla(240,100%,70%,0.15) 0px, transparent 50%);
+            --gradient-main: linear-gradient(135deg, #4472C4 0%, #1B2951 100%);
+            --gradient-dark: linear-gradient(135deg, #1B2951 0%, #0F1A3C 100%);
+            --gradient-accent: linear-gradient(135deg, #5B9BD5 0%, #4472C4 100%);
+            --gradient-mesh: radial-gradient(at 40% 20%, hsla(220,60%,50%,0.08) 0px, transparent 50%),
+                            radial-gradient(at 80% 0%, hsla(205,100%,60%,0.06) 0px, transparent 50%),
+                            radial-gradient(at 0% 50%, hsla(210,50%,60%,0.04) 0px, transparent 50%),
+                            radial-gradient(at 80% 100%, hsla(220,70%,50%,0.08) 0px, transparent 50%);
             
             /* Typography */
             --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -39,18 +42,18 @@
             --font-mono: 'JetBrains Mono', monospace;
             
             /* Spacing & Effects */
-            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
-            --shadow-glow: 0 0 40px rgba(0, 217, 255, 0.3);
-            --shadow-glow-purple: 0 0 40px rgba(124, 58, 237, 0.3);
+            --shadow-sm: 0 1px 3px rgba(27,41,81,0.12);
+            --shadow-md: 0 2px 6px rgba(27,41,81,0.15);
+            --shadow-lg: 0 10px 15px rgba(27,41,81,0.1);
+            --shadow-xl: 0 20px 25px rgba(27,41,81,0.1);
+            --shadow-glow: 0 0 20px rgba(68,114,196,0.3);
+            --shadow-glow-purple: 0 0 20px rgba(91,155,213,0.3);
         }
 
         body {
             font-family: var(--font-primary);
-            background: var(--ai-primary);
-            color: #E2E8F0;
+            background: #FFFFFF;
+            color: #2C3E50;
             overflow-x: hidden;
             position: relative;
         }
@@ -84,8 +87,8 @@
             width: 100%;
             height: 100%;
             background-image: 
-                linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
+                linear-gradient(rgba(68, 114, 196, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(68, 114, 196, 0.015) 1px, transparent 1px);
             background-size: 50px 50px;
             animation: gridMove 10s linear infinite;
             pointer-events: none;
@@ -125,10 +128,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(180deg, 
-                rgba(10, 14, 39, 0.7) 0%, 
-                rgba(26, 31, 58, 0.9) 50%, 
-                rgba(10, 14, 39, 0.7) 100%);
+            background: #FFFFFF;
             z-index: -1;
         }
 
@@ -155,7 +155,7 @@
 
         /* Title Slide Special Styling */
         .title-slide {
-            background: var(--gradient-dark);
+            background: #FFFFFF;
             position: relative;
             overflow: hidden;
         }
@@ -170,11 +170,11 @@
             background: conic-gradient(
                 from 0deg at 50% 50%,
                 transparent 0deg,
-                rgba(0, 217, 255, 0.1) 60deg,
+                rgba(68, 114, 196, 0.05) 60deg,
                 transparent 120deg,
-                rgba(124, 58, 237, 0.1) 180deg,
+                rgba(27, 41, 81, 0.05) 180deg,
                 transparent 240deg,
-                rgba(129, 140, 248, 0.1) 300deg,
+                rgba(91, 155, 213, 0.05) 300deg,
                 transparent 360deg
             );
             animation: rotate 20s linear infinite;
@@ -189,7 +189,7 @@
             font-size: clamp(2.5rem, 6vw, 5rem);
             font-weight: 800;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #00D9FF 0%, #7C3AED 50%, #818CF8 100%);
+            background: linear-gradient(135deg, #1B2951 0%, #4472C4 50%, #5B9BD5 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -199,8 +199,8 @@
         }
 
         @keyframes glowText {
-            from { filter: brightness(1) drop-shadow(0 0 20px rgba(0, 217, 255, 0.5)); }
-            to { filter: brightness(1.1) drop-shadow(0 0 30px rgba(124, 58, 237, 0.7)); }
+            from { filter: brightness(1) drop-shadow(0 0 20px rgba(68, 114, 196, 0.3)); }
+            to { filter: brightness(1.1) drop-shadow(0 0 30px rgba(27, 41, 81, 0.4)); }
         }
 
         h2 {
@@ -208,7 +208,7 @@
             font-size: clamp(2rem, 4vw, 3.5rem);
             font-weight: 700;
             margin-bottom: 2rem;
-            color: #F1F5F9;
+            color: #1B2951;
             position: relative;
             letter-spacing: -0.01em;
         }
@@ -221,7 +221,7 @@
             transform: translateX(-50%);
             width: 100px;
             height: 3px;
-            background: var(--gradient-accent);
+            background: linear-gradient(90deg, #4472C4, #5B9BD5);
             border-radius: 2px;
         }
 
@@ -230,14 +230,14 @@
             font-size: clamp(1.25rem, 2.5vw, 1.75rem);
             font-weight: 600;
             margin-bottom: 1rem;
-            color: var(--ai-accent);
+            color: #1B2951;
             letter-spacing: -0.01em;
         }
 
         .subtitle {
             font-size: clamp(1.1rem, 2vw, 1.5rem);
             font-weight: 400;
-            color: #94A3B8;
+            color: #5A6C7D;
             margin-bottom: 3rem;
             letter-spacing: 0.05em;
             text-transform: uppercase;
@@ -253,20 +253,20 @@
         }
 
         .model-badge {
-            background: rgba(0, 217, 255, 0.1);
-            border: 1px solid rgba(0, 217, 255, 0.3);
-            color: var(--ai-accent);
+            background: #1B2951;
+            border: 2px solid #1B2951;
+            color: white;
             padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 500;
+            border-radius: 8px;
+            font-weight: 600;
             font-size: 0.9rem;
             letter-spacing: 0.02em;
             position: relative;
             overflow: hidden;
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
             animation: fadeInUp 0.6s ease-out forwards;
             opacity: 0;
+            box-shadow: 0 2px 8px rgba(27, 41, 81, 0.2);
         }
 
         .model-badge:nth-child(1) { animation-delay: 0.1s; }
@@ -302,10 +302,10 @@
         }
 
         .model-badge:hover {
-            background: rgba(0, 217, 255, 0.2);
-            border-color: var(--ai-accent);
+            background: #4472C4;
+            border-color: #4472C4;
             transform: translateY(-2px);
-            box-shadow: var(--shadow-glow);
+            box-shadow: 0 4px 12px rgba(68, 114, 196, 0.3);
         }
 
         /* Framework Cards */
@@ -317,10 +317,10 @@
         }
 
         .framework-card {
-            background: linear-gradient(135deg, rgba(26, 31, 58, 0.8) 0%, rgba(10, 14, 39, 0.8) 100%);
+            background: white;
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(0, 217, 255, 0.2);
-            border-radius: 20px;
+            border: 2px solid #E1E8ED;
+            border-radius: 12px;
             padding: 2rem;
             position: relative;
             overflow: hidden;
@@ -329,6 +329,7 @@
             display: flex;
             flex-direction: column;
             cursor: pointer;
+            box-shadow: 0 2px 8px rgba(27, 41, 81, 0.08);
         }
 
         .framework-card::before {
@@ -337,8 +338,8 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 2px;
-            background: var(--gradient-accent);
+            height: 3px;
+            background: linear-gradient(90deg, #4472C4, #5B9BD5);
             transform: scaleX(0);
             transition: transform 0.3s ease;
             transform-origin: left;
@@ -355,7 +356,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(68, 114, 196, 0.05) 0%, transparent 70%);
             opacity: 0;
             transition: opacity 0.3s ease;
             pointer-events: none;
@@ -367,24 +368,25 @@
 
         .framework-card:hover {
             transform: translateY(-8px) scale(1.02);
-            border-color: var(--ai-accent);
+            border-color: #4472C4;
+            background: #FFFFFF;
             box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.3),
-                0 0 60px rgba(0, 217, 255, 0.2);
+                0 20px 40px rgba(27, 41, 81, 0.15),
+                0 0 40px rgba(68, 114, 196, 0.1);
         }
 
         .card-icon {
             width: 70px;
             height: 70px;
             margin: 0 auto 1.5rem;
-            background: var(--gradient-accent);
-            border-radius: 20px;
+            background: linear-gradient(135deg, #4472C4, #5B9BD5);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2rem;
             position: relative;
-            box-shadow: var(--shadow-glow);
+            box-shadow: 0 4px 12px rgba(68, 114, 196, 0.3);
             animation: pulse 2s ease-in-out infinite;
         }
 
@@ -396,12 +398,14 @@
         .framework-card h3 {
             margin-bottom: 1rem;
             font-size: 1.3rem;
+            color: #1B2951;
+            font-weight: 600;
         }
 
         .framework-card p {
             font-size: 0.95rem;
             line-height: 1.6;
-            color: #CBD5E1;
+            color: #5A6C7D;
             flex-grow: 1;
         }
 
@@ -414,15 +418,16 @@
         }
 
         .roadmap-item {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(0, 217, 255, 0.1) 100%);
-            border: 1px solid rgba(129, 140, 248, 0.3);
-            border-radius: 16px;
+            background: white;
+            border: 2px solid #E1E8ED;
+            border-radius: 8px;
             padding: 1.75rem;
-            border-left: 4px solid var(--ai-accent);
+            border-left: 5px solid #4472C4;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
             min-height: 180px;
+            box-shadow: 0 2px 8px rgba(27, 41, 81, 0.08);
         }
 
         .roadmap-item::before {
@@ -432,7 +437,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(68, 114, 196, 0.05), transparent);
             transition: left 0.6s ease;
         }
 
@@ -442,23 +447,27 @@
 
         .roadmap-item:hover {
             transform: translateX(8px);
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.2) 0%, rgba(0, 217, 255, 0.2) 100%);
-            box-shadow: var(--shadow-glow);
+            background: #FFFFFF;
+            border-color: #4472C4;
+            border-left-color: #1B2951;
+            box-shadow: 0 4px 12px rgba(68, 114, 196, 0.15);
         }
 
         .roadmap-item h3 {
             font-size: 1.2rem;
             margin-bottom: 0.75rem;
+            color: #1B2951;
+            font-weight: 600;
         }
 
         .roadmap-item p {
             font-size: 0.95rem;
             line-height: 1.5;
-            color: #94A3B8;
+            color: #5A6C7D;
         }
 
         .roadmap-item p strong {
-            color: var(--ai-accent);
+            color: #4472C4;
             font-weight: 600;
         }
 
@@ -471,9 +480,9 @@
         }
 
         .metric-card {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 16px;
+            background: white;
+            border: 2px solid #E1E8ED;
+            border-radius: 8px;
             padding: 1.75rem;
             text-align: center;
             transition: all 0.3s ease;
@@ -483,6 +492,49 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(27, 41, 81, 0.08);
+        }
+
+        .metric-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #4472C4, #5B9BD5);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .metric-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            background: #FFFFFF;
+            border-color: #4472C4;
+            box-shadow: 0 4px 12px rgba(68, 114, 196, 0.15);
+        }
+
+        .metric-number {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #1B2951;
+            font-weight: 600;
+        }
+
+        .metric-card p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #5A6C7D;
+        } 8px rgba(0, 48, 87, 0.08);
         }
 
         .metric-card::after {
@@ -495,6 +547,36 @@
             background: var(--gradient-accent);
             transform: scaleX(0);
             transition: transform 0.3s ease;
+        }
+
+        .metric-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            background: #FFFFFF;
+            border-color: #0077BE;
+            box-shadow: 0 4px 12px rgba(0, 119, 190, 0.15);
+        }
+
+        .metric-number {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #003057;
+            font-weight: 600;
+        }
+
+        .metric-card p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #5A6C7D;
+        }: transform 0.3s ease;
         }
 
         .metric-card:hover::after {
@@ -526,9 +608,9 @@
 
         /* Highlight Box */
         .highlight-box {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(0, 217, 255, 0.1) 100%);
-            border: 1px solid rgba(0, 217, 255, 0.3);
-            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(68, 114, 196, 0.05) 0%, rgba(91, 155, 213, 0.05) 100%);
+            border: 2px solid #4472C4;
+            border-radius: 12px;
             padding: 2rem;
             margin: 2rem 0;
             position: relative;
@@ -543,27 +625,27 @@
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: var(--gradient-accent);
-            border-radius: 20px;
+            background: linear-gradient(90deg, #4472C4, #5B9BD5);
+            border-radius: 12px;
             opacity: 0;
             z-index: -1;
             transition: opacity 0.3s ease;
         }
 
         .highlight-box:hover::before {
-            opacity: 0.3;
+            opacity: 0.2;
         }
 
         .highlight-box h3 {
             font-size: 1.5rem;
             line-height: 1.6;
-            color: #F1F5F9;
+            color: #1B2951;
         }
 
         .highlight-box p {
             font-size: 1.1rem;
             line-height: 1.7;
-            color: #CBD5E1;
+            color: #2C3E50;
         }
 
         /* Navigation Dots */
@@ -582,8 +664,8 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: rgba(129, 140, 248, 0.3);
-            border: 1px solid rgba(0, 217, 255, 0.3);
+            background: rgba(68, 114, 196, 0.2);
+            border: 1px solid rgba(68, 114, 196, 0.4);
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
@@ -598,14 +680,14 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            border: 1px solid var(--ai-accent);
+            border: 1px solid #4472C4;
             opacity: 0;
             transition: all 0.3s ease;
         }
 
         .nav-dot.active {
-            background: var(--ai-accent);
-            box-shadow: var(--shadow-glow);
+            background: #4472C4;
+            box-shadow: 0 0 20px rgba(68, 114, 196, 0.4);
         }
 
         .nav-dot.active::after {
@@ -627,7 +709,7 @@
         }
 
         .nav-dot:hover {
-            background: rgba(0, 217, 255, 0.5);
+            background: rgba(68, 114, 196, 0.5);
             transform: scale(1.2);
         }
 
@@ -637,10 +719,10 @@
             top: 0;
             left: 0;
             height: 3px;
-            background: var(--gradient-accent);
+            background: linear-gradient(90deg, #4472C4, #5B9BD5);
             transition: width 0.3s ease;
             z-index: 1001;
-            box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+            box-shadow: 0 0 10px rgba(68, 114, 196, 0.5);
         }
 
         /* Scroll Indicator */
@@ -655,7 +737,7 @@
         .scroll-indicator::before {
             content: '⌄';
             font-size: 1.5rem;
-            color: var(--ai-accent);
+            color: #4472C4;
             opacity: 0.7;
         }
 
@@ -677,9 +759,9 @@
 
         .particle {
             position: absolute;
-            background: var(--ai-accent);
+            background: #4472C4;
             border-radius: 50%;
-            opacity: 0.5;
+            opacity: 0.3;
             animation: float-particle 20s linear infinite;
         }
 
@@ -755,8 +837,8 @@
                 <div class="highlight-box">
                     <h3>"How can we deploy AI to enhance strategic execution outcomes, while building AI-literate teams and delivering AI-enabled customer solutions?"</h3>
                 </div>
-                <p style="font-size: 1.2rem; line-height: 1.8; margin-top: 2rem; color: #CBD5E1;">
-                    This requires strategic choices about where AI plays its role: team capability, customer solutions, operational efficiency, and innovation. Our strategy positions AI as a <strong style="color: var(--ai-accent);">strategic execution enabler</strong> that transforms both how we work and what we deliver.
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-top: 2rem; color: #2C3E50;">
+                    This requires strategic choices about where AI plays its role: team capability, customer solutions, operational efficiency, and innovation. Our strategy positions AI as a <strong style="color: #4472C4;">strategic execution enabler</strong> that transforms both how we work and what we deliver.
                 </p>
             </div>
         </section>
@@ -804,7 +886,7 @@
         <section class="slide">
             <div class="slide-content">
                 <h2>How We Will Win</h2>
-                <p style="font-size: 1.3rem; margin-bottom: 3rem; color: #94A3B8;">Six differentiating moves to turn AI into a trusted strategic execution partner</p>
+                <p style="font-size: 1.3rem; margin-bottom: 3rem; color: #5A6C7D;">Six differentiating moves to turn AI into a trusted strategic execution partner</p>
                 
                 <div class="roadmap">
                     <div class="roadmap-item">
@@ -878,7 +960,7 @@
         <section class="slide">
             <div class="slide-content">
                 <h2>Management Systems</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #94A3B8;">Portfolio-level impact metrics, not just activity completion</p>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #5A6C7D;">Portfolio-level impact metrics, not just activity completion</p>
                 
                 <div class="metric-grid">
                     <div class="metric-card">
@@ -1003,8 +1085,8 @@
                 <h1>AI-Confident Strategic Execution</h1>
                 <p class="subtitle">Experiment • Scale • Transform</p>
                 <div class="highlight-box">
-                    <p style="font-size: 1.3rem; line-height: 1.8; color: #F1F5F9;">
-                        By focusing on governance, capability building, experimentation, and targeted use cases, we create a <strong style="color: var(--ai-accent);">repeatable system</strong> that scales responsibly across all delivery initiatives while staying current with AI innovation.
+                    <p style="font-size: 1.3rem; line-height: 1.8; color: #1B2951;">
+                        By focusing on governance, capability building, experimentation, and targeted use cases, we create a <strong style="color: #4472C4;">repeatable system</strong> that scales responsibly across all delivery initiatives while staying current with AI innovation.
                     </p>
                 </div>
                 <div class="scroll-indicator"></div>
